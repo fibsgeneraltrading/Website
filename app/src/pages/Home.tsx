@@ -25,8 +25,6 @@ export default function Home() {
         <GlobalReach />
         <Statistics />
         <Mission />
-        <Certifications />
-        <Administration />
         <MonumentGallery />
         <Contact />
       </main>

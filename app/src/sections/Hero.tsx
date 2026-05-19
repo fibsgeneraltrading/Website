@@ -73,22 +73,35 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex flex-col justify-center">
+      <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 pt-20 flex flex-col justify-end pb-[400px]">
+        <div className="mb-4">
+          <IsometricHeroText text="F.I.B.S General Trading" />
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-xs font-medium tracking-widest uppercase">
+            Global Leaders in Ferrous & Non-Ferrous Scrap Metal Trading
+          </span>
+        </div>
         <div className="max-w-4xl">
-          <div className="mb-4">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-xs font-medium tracking-widest uppercase">
-              Global Leaders in Ferrous & Non-Ferrous Scrap Metal Trading
-            </span>
-          </div>
 
-          <IsometricHeroText text="Connecting Global Industries Through Reliable Scrap Metal Trading" />
+
+          <div className="mb-4">
+
+
+          </div>
 
           <p
             ref={subtitleRef}
-            className="mt-6 md:mt-8 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed"
-          >
-            Serving the Middle East, Africa, Europe, and Asia with excellence since 1950.
+            className="mt-6 md:mt-8 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed font-light">
+
+            Connecting global industries through reliable scrap metal trading.
           </p>
+          <p
+            ref={subtitleRef}
+            className="mt-6 md:mt-3 text-lg md:text-s text-white/50 max-w-2xl leading-relaxed"
+          >
+
+            Middle East · Africa · Europe · Asia — since 1950.
+          </p>
+          <div className="mb-26"></div>
 
           <div ref={ctaRef} className="mt-10 flex flex-wrap gap-4">
             <a

@@ -114,40 +114,40 @@ export default function MonumentGallery() {
       ref={sectionRef}
       className="relative w-full overflow-hidden bg-[#f8f8f8] py-4"
     >
-      <div className="grid grid-cols-3 gap-3 md:gap-4 px-3 md:px-4">
-        {columns.map((colImages, colIndex) => (
-          <div
-            key={colIndex}
-            className="flex flex-col gap-3 md:gap-4"
-            ref={(el) => { columnRefs.current[colIndex] = el; }}
-            style={{
-              marginTop:
-                colIndex === 0 ? "40px" :
-                colIndex === 1 ? "0px" :
-                "80px",
-            }}
-          >
-            {colImages.map((src, imgIndex) => (
-              <div
-                key={imgIndex}
-                className={`gallery-img-wrap group w-full ${aspectRatios[colIndex][imgIndex]} rounded-2xl overflow-hidden`}
-                style={{
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04)",
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <img
-                  src={src}
-                  alt={`Gallery ${colIndex * 4 + imgIndex + 1}`}
-                  className="w-full h-full object-cover scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 px-3 md:px-4">
+  {columns.map((colImages, colIndex) => (
+    <div
+      key={colIndex}
+      className="flex flex-col gap-3 md:gap-4"
+      ref={(el) => { columnRefs.current[colIndex] = el; }}
+      style={{
+        marginTop:
+          colIndex === 0 ? "40px" :
+          colIndex === 1 ? "0px" :
+          "80px",
+      }}
+    >
+      {colImages.map((src, imgIndex) => (
+        <div
+          key={imgIndex}
+          className={`gallery-img-wrap group w-full aspect-[4/3] md:${aspectRatios[colIndex][imgIndex]} rounded-2xl overflow-hidden`}
+          style={{
+            boxShadow: "0 4px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04)",
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img
+            src={src}
+            alt={`Gallery ${colIndex * 4 + imgIndex + 1}`}
+            className="w-full h-full object-cover scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
     </section>
   );
 }

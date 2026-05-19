@@ -21,7 +21,10 @@ const contactDetails = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    values: ["Lebanon: +961 3 123 456", "Emirates: +971 50 123 4567"],
+    values: [
+      { label: "Lebanon: +961 3 123 456", href: "https://wa.me/9613123456" },
+      { label: "Emirates: +971 50 123 4567", href: "https://wa.me/971501234567" },
+    ],
   },
   {
     icon: MapPin,
@@ -147,14 +150,24 @@ export default function Contact() {
                         {detail.label}
                       </div>
                       <div className="space-y-1">
-                        {detail.values.map((value) => (
-                          <div
-                            key={value}
-                            className="text-sm md:text-base text-white"
-                          >
-                            {value}
-                          </div>
-                        ))}
+                        {detail.values.map((value) =>
+                          typeof value === "string" ? (
+                            <div key={value} className="text-sm md:text-base text-white">
+                              {value}
+                            </div>
+                          ) : (
+                            <a
+                              key={value.label}
+                              href={value.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 text-sm md:text-base text-green-400 hover:text-green-300 transition-colors"
+                            >
+                              <MessageCircle size={14} />
+                              {value.label}
+                            </a>
+                          )
+                        )}
                       </div>
                     </div>
                   </div>

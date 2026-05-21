@@ -16,20 +16,24 @@ const contactDetails = [
   {
     icon: Phone,
     label: "UAE Phone",
-    values: ["+971 4 123 4567", "+971 4 765 4321"],
+    values: ["+971 52 896 3333", "+971 55 456 6280"],
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     values: [
-      { label: "Lebanon: +961 3 123 456", href: "https://wa.me/9613123456" },
-      { label: "Emirates: +971 50 123 4567", href: "https://wa.me/971501234567" },
+      { label: "Lebanon: +961 3 810 876", href: "https://wa.me/9613810876" },
+      { label: "Emirates: +971 52 896 3333", href: "https://wa.me/971528963333" },
     ],
   },
   {
     icon: MapPin,
     label: "Address",
-    values: ["P.O. Box 12345", "Jebel Ali, Dubai, UAE"],
+    values: [
+      "Amber Gem Tower, Sheikh Khalifa Bin Zayed Street",
+      "Al Rashediya 3, Office No. E1 – 1013",
+      "P.O. Box 40380 – Ajman Free Zone, UAE",
+    ],
   },
   {
     icon: Mail,
@@ -126,7 +130,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-white">Headquarters</div>
-                  <div className="text-xs">Jebel Ali Free Zone, Dubai, UAE</div>
+                  <div className="text-xs">Ajman Free Zone, UAE</div>
                 </div>
               </div>
             </div>

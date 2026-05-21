@@ -55,7 +55,7 @@ export default function Footer() {
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
-                   <a
+                  <a
                     key={social.label}
                     href={social.href}
                     className="w-10 h-10 rounded-full bg-[#f5f5f5] flex items-center justify-center hover:bg-[#2563eb] hover:text-white text-[#949494] transition-all duration-300"
@@ -76,11 +76,11 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                   <a
+                  <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
                     className="text-sm text-[#949494] hover:text-[#1a1a1a] transition-colors"
-                   >
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -89,19 +89,30 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
+          {/* Contact Info */}
           <div>
             <h4 className="text-sm font-semibold text-[#1a1a1a] uppercase tracking-wider mb-4">
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-[#949494]">
-              <li>P.O. Box 12345</li>
-              <li>Jebel Ali, Dubai, UAE</li>
-              <li>+971 4 123 4567</li>
+              <li>Amber Gem Tower, Sheikh Khalifa Bin Zayed Street</li>
+              <li>Al Rashediya 3, Office No. E1 – 1013</li>
+              <li>P.O. Box 40380 – Ajman Free Zone, UAE</li>
+              <li>+971 52 896 3333</li>
+              <li>+971 55 456 6280</li>
               <li>
-                 <a
+                <a
+                  href="mailto:manager@fibstrading.com"
+                  className="hover:text-[#1a1a1a] transition-colors"
+                >
+                  manager@fibstrading.com
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:info@fibstrading.com"
                   className="hover:text-[#1a1a1a] transition-colors"
-                 >
+                >
                   info@fibstrading.com
                 </a>
               </li>
@@ -125,7 +136,7 @@ export default function Footer() {
 
             <span className="w-px h-4 bg-[#e5e5e5]" />
 
-             <a
+            <a
               href="https://itconsultants.online"
               target="_blank"
               rel="noopener noreferrer"

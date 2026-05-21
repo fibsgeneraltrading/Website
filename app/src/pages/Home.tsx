@@ -6,6 +6,8 @@ import Services from "../sections/Services";
 import GlobalReach from "../sections/GlobalReach";
 import Statistics from "../sections/Statistics";
 import Mission from "../sections/Mission";
+import Certifications from "../sections/Certifications";
+import Administration from "../sections/Administration";
 import MonumentGallery from "../sections/MonumentGallery";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";

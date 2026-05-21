@@ -209,7 +209,9 @@ html.lenis, html.lenis body {
   will-change: transform, opacity;
 }
 
-
+.line {
+  display: contents;
+}
 
 /* Gallery image hover */
 .gallery-img {

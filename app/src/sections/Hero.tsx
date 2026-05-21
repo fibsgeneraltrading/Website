@@ -53,7 +53,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen overflow-hidden bg-[#1a1a1a]"
+      className="relative w-full h-screen bg-[#1a1a1a]"
     >
       {/* Video Background */}
       <div className="absolute inset-0">
@@ -67,65 +67,47 @@ export default function Hero() {
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 pt-20 flex flex-col justify-end pb-[400px]">
-        <div className="mb-4">
-          <IsometricHeroText text="F.I.B.S General Trading" />
-          <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-xs font-medium tracking-widest uppercase">
-            Global Leaders in Ferrous & Non-Ferrous Scrap Metal Trading
-          </span>
-        </div>
+      <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex flex-col justify-center md:justify-end md:pb-[400px] pt-24 -mt-[20vh] md:mt-0">
         <div className="max-w-4xl">
 
-
-          <div className="mb-4">
-
-
+          <div className="mb-4 md:mb-6 contents">
+            <IsometricHeroText text="F.I.B.S General Trading" />
           </div>
 
-          <p
-            ref={subtitleRef}
-            className="mt-6 md:mt-8 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed font-light">
+          <span className="inline-block px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-[10px] md:text-xs font-medium tracking-widest uppercase max-w-full">
+            Ferrous & Non-Ferrous Scrap Metal Trading
+          </span>
 
+          <p ref={subtitleRef} className="mt-4 md:mt-6 text-base md:text-xl text-white/75 max-w-2xl leading-relaxed font-light">
             Connecting global industries through reliable scrap metal trading.
           </p>
-          <p
-            ref={subtitleRef}
-            className="mt-6 md:mt-3 text-lg md:text-s text-white/50 max-w-2xl leading-relaxed"
-          >
-
+          <p className="mt-2 text-xs md:text-sm text-white/40 max-w-2xl leading-relaxed tracking-wide">
             Middle East · Africa · Europe · Asia — since 1950.
           </p>
-          <div className="mb-26"></div>
 
-          <div ref={ctaRef} className="mt-10 flex flex-wrap gap-4">
+          <div ref={ctaRef} className="mt-6 md:mt-8 flex flex-wrap gap-3 md:gap-4">
             <a
               href="#services"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#2563eb] text-white font-medium text-sm hover:bg-[#1d4ed8] transition-colors duration-300"
+              onClick={(e) => { e.preventDefault(); document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" }); }}
+              className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[#2563eb] text-white font-medium text-sm hover:bg-[#1d4ed8] transition-colors duration-300"
             >
               Explore Services
               <ArrowRight size={16} />
             </a>
             <a
               href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm"
+              onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
+              className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm"
             >
               Contact Us
             </a>
           </div>
+
         </div>
       </div>
 

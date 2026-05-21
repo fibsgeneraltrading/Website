@@ -55,7 +55,7 @@ export default function IsometricHeroText({ text, className = "" }: IsometricHer
   return (
     <h1
       ref={containerRef}
-      className={`text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-bold leading-[1.1] tracking-[-2.46px] text-white ${className}`}
+      className={`text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-bold leading-[1.3] tracking-[-2.46px] text-white ${className}`}
       style={{ perspective: "1000px" }}
     >
       {text}
